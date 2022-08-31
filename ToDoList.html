@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="StyleToDo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="Todo.js"></script>
+      
+</head>
+<body > 
+    <div class="container">
+        <header>
+            <h1>To Do List <span id="logo"><img src="CheckLogo.png" alt="To do List"></span></h1>
+            <p id="date"></p>     
+       </header>
+        <main class="container__main">
+       
+            <aside class="container__left"><h1>Add Task</h1>
+             <form id="inputs">
+                <div class="inpuTask"><label>Task name: </label>
+                <input type="text" id="TaskName"   name="Task name" required  ></div>
+                
+                <div class="inpuTask"><label>Category: </label>
+                <select id="Category">
+                    <option selected value="Study">Study</option>
+                    <option  value="Sport">Sport</option>
+                    <option  value="Home">Home</option>
+                </select>
+                </div>
+                
+                <div class="inpuTask"><label>Priortiy: </label>
+                <input  type="radio" name="Priortiy" value="High" required checked id="High"><label for="High">High</label>
+                <input type="radio" name="Priortiy" value="Meduim" id="Meduim"><label for="Meduim">Meduim</label>
+                <input type="radio" name="Priortiy" value="Low" id="Low"><label for="Low">Low</label>
+                </div>
+                <div class="inpuTask">
+                <label>Deadline: </label>
+                <input id="Deadline" type="date" name="Deadline" required >
+                </div>
+                
+                <div class="inpuTask">
+                <input type="submit" value="Submit" id="submit" >
+                <input type="reset" value="Clear" id="clear">
+                </div>
+            </form>
+            
+                </aside>
+
+            <article class="container__middle"> <h1>To do List</h1>
+                <div id="Tasks">   
+
+                    <ul id="TasksNotComplet">
+                   
+                    </ul>
+
+
+                    <button id="done" type="button" value="Done" >Done</button>
+             </div></article>
+    
+            <nav class="container__right"><h1>Completed Task</h1>
+                <div id="Completed">
+
+                    <ul id="CompletedTasks">
+                 
+                    </ul>
+
+
+                </div></nav>
+
+
+        </main>
+        <footer>
+            <p>&copy;2022 <a href="mailto:sarahbaalomar@gmail.com">Email me</a></p>
+        </footer>
+    </div>
+</body>
+</html>
